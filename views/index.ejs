@@ -10,14 +10,28 @@
     <title>John Carpenter Movies</title>
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <div class="nav-wrapper teal lighten-2">
             <a href="#!" class="brand-logo"><i class="material-icons">camera_roll</i>JCM</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#">Leaderboard</a></li>
           </ul>
         </div>
+    </nav> -->
+    <nav>
+        <div class="nav-wrapper teal lighten -2">
+            <a href="#!" class="brand-logo"><i class="material-icons">camera_roll</i>JCM</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Leaderboard</a></li>
+            </ul>
+        </div>
     </nav>
+    
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#" class="sidenav-close">Leaderboard</a></li>
+    </ul>
+
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -103,6 +117,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/main.js"></script>
 
 </body>
 </html>
