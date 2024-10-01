@@ -8,8 +8,8 @@ router.get('/', homeController.getIndex)
 
 
 //@desc     Update likes
-//@Route    POST /likes
-router.post('/likes', homeController.updateLikes)
+//@Route    PUT /likes
+router.put('/likes', homeController.updateLikes)
 
 
 module.exports = router
