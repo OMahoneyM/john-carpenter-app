@@ -1,0 +1,22 @@
+{
+  "name": "john-carpenter-app",
+  "version": "1.0.0",
+  "description": "An app where users can vote for their favorite John Carpenter movie",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael O'Mahoney",
+  "license": "MIT",
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
