@@ -10,5 +10,21 @@ module.exports = {
         } catch (err) {
             console.error(err)
         }
+    },
+    updateLikes: async (req, res) => {
+        try {
+            //Find film from filmID passed from request
+            await Film.findOneAndUpdate({_id:req.body.filmID},{
+                //Increment views by 1
+                $inc: {
+                    likes: 1
+                }
+            })
+            console.log('Like added')
+            res.json('Like added')
+        } catch (err) {
+            console.error(err)
+        }
     }
+
 }
