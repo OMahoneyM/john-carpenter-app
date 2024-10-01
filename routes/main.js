@@ -2,9 +2,14 @@ const express = require('express')
 const router = express.Router()
 const homeController = require('../controllers/home')
 
-//@desc     Login/Landing Page
+//@desc     Landing Page
 //@Route    GET /
 router.get('/', homeController.getIndex)
+
+
+//@desc     Update likes
+//@Route    POST /likes
+router.post('/likes', homeController.updateLikes)
 
 
 module.exports = router
