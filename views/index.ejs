@@ -45,10 +45,12 @@
                             <span class="right"><%= el.mpaaRating %></span>
                         </div>
                         <div class="card-action">
-                            <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Like
-                                <i class="material-icons right">thumb_up</i>
-                            </button>
-                            <span class="badge"><%= el.likes %></span>
+                            <form action="/likes" method="post">
+                                <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Like
+                                    <i class="material-icons right">thumb_up</i>
+                                </button>
+                                <span class="badge"><%= el.likes %></span>
+                            </form>
                         </div>
                     </div>
                 </div>
