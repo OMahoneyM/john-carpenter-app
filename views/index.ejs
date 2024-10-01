@@ -9,15 +9,7 @@
             
     <title>John Carpenter Movies</title>
 </head>
-<body>
-    <!-- <nav>
-        <div class="nav-wrapper teal lighten-2">
-            <a href="#!" class="brand-logo"><i class="material-icons">camera_roll</i>JCM</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Leaderboard</a></li>
-          </ul>
-        </div>
-    </nav> -->
+<body class="grey lighten-2">
     <nav>
         <div class="nav-wrapper teal lighten -2">
             <a href="#!" class="brand-logo"><i class="material-icons">camera_roll</i>JCM</a>
@@ -43,9 +35,9 @@
         <div class="row">
             <% films.sort((a, b) => a.year - b.year).forEach( el => { %>
                 <div class="col s12 m6 l4 xl3">
-                    <div class="card large">
+                    <div class="card large hoverable">
                         <div class="card-image">
-                            <img src="/assets/images/<%=el.title%>.jpg" alt="<%= el.title %> poster">
+                            <img class="materialboxed" src="/assets/images/<%=el.title%>.jpg" alt="<%= el.title %> poster">
                         </div>
                         <div class="card-content">
                             <span class="card-title"><%= el.title %></span>
@@ -56,7 +48,7 @@
                             <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Like
                                 <i class="material-icons right">thumb_up</i>
                             </button>
-                            <span class="right"><%= el.likes %></span>
+                            <span class="badge"><%= el.likes %></span>
                         </div>
                     </div>
                 </div>
