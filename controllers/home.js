@@ -14,12 +14,14 @@ module.exports = {
     updateLikes: async (req, res) => {
         try {
             //Find film from filmID passed from request
-            await Film.findOneAndUpdate({_id:req.body.filmID},{
-                //Increment views by 1
+            //Only update likes if < 1 mil
+            await Film.findOneAndUpdate({_id:req.body.filmID, likes: {$lt: 1000000}},{
+                //Increment likes by 1
                 $inc: {
                     likes: 1
-                }
-            })
+                }},
+                {returnNewDocument: true}
+            )
             console.log('Like added')
             res.json('Like added')
         } catch (err) {
