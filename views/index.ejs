@@ -35,7 +35,7 @@
         <div class="row">
             <% films.sort((a, b) => a.year - b.year).forEach( el => { %>
                 <div class="col s12 m6 l4 xl3">
-                    <div class="card large hoverable" data-id="<%=el._id%>">
+                    <div class="card large hoverable">
                         <div class="card-image">
                             <img class="materialboxed" src="/assets/images/<%=el.title%>.jpg" alt="<%= el.title %> poster">
                         </div>
@@ -44,13 +44,11 @@
                             <span><%= el.year %></span>
                             <span class="right"><%= el.mpaaRating %></span>
                         </div>
-                        <div class="card-action">
-                            <form action="/likes" method="post">
-                                <button class="btn waves-effect waves-light btn-small" type="submit" name="action">Like
-                                    <i class="material-icons right">thumb_up</i>
-                                </button>
-                                <span class="badge"><%= el.likes %></span>
-                            </form>
+                        <div class="card-action" data-id="<%=el._id%>">
+                            <button class="like btn waves-effect waves-light btn-small" type="submit" name="action">Like
+                                <i class="material-icons right">thumb_up</i>
+                            </button>
+                            <span class="badge"><%= el.likes %></span>
                         </div>
                     </div>
                 </div>
